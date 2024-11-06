@@ -20,7 +20,7 @@ class FormController extends Controller
          //TODO: adding more validation
         $validator = Validator::make($request->all(), [
             'form_name' => 'required|string|max:255',
-            'form_data' => 'required|array',
+            'form_data' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -37,12 +37,6 @@ class FormController extends Controller
 
     public function fetch($id)
     {
-        // dd($id);
-        // $form = isset($id)? Form::find($id):Form::all();
-        // if($id){        
-            
-        // }
-        // // $form = Form::all();
         $form = Form::find($id);
 
         if (!$form) {
