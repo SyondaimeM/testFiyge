@@ -1,66 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# React Form Builder
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Welcome to the **React Form Builder** project! This dynamic form builder application is built with React on the frontend and Laravel on the backend. It enables users to create, customize, save, edit, and delete forms with various field types. The app features drag-and-drop functionality and integrates seamlessly with a Laravel API for form storage and management.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Table of Contents
+- [Features](#features)
+- [Technologies](#technologies)
+- [Prerequisites](#prerequisites)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Features
+- **Drag-and-Drop**: Easily reorder form elements with the intuitive drag-and-drop functionality powered by [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd).
+- **Form Elements**: Add and customize various field types like:
+  - Text inputs
+  - Textareas
+  - Checkboxes
+  - Radio buttons
+  - Date pickers
+  - File uploads
+- **Customization**: Edit the properties of each form element including:
+  - Label
+  - Placeholder
+  - Name
+  - Type
+- **Save and Load Forms**: Save your forms to the API, load existing forms for editing, or delete forms you no longer need.
+- **Search**: Find saved forms easily by their name.
+- **Real-Time Feedback**: Get instant feedback on actions such as saving, updating, or deleting forms.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 💻 Technologies
+- **Frontend**:
+  - React
+  - [Axios](https://axios-http.com/) for API requests
+  - [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd) for drag-and-drop functionality
+  - Vite for fast build times
+- **Backend**:
+  - Laravel
+  - MySQL database
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📦 Prerequisites
+Before you begin, ensure you have the following installed:
 
-## Laravel Sponsors
+- npm (for frontend dependencies)
+- PHP (>=7.4)
+- Composer (for PHP dependency management)
+- MySQL (for the database)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🖥️ Usage
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+1. Open the application in your browser at `http://127.0.0.1:8000/`.
+2. Use the sidebar buttons to add form fields.
+3. Edit properties for each field in the "Edit Properties" section.
+4. Drag and drop fields to reorder them.
+5. Click "Save Form" to store the form via the API.
+6. Search for saved forms by name.
+7. Edit or delete saved forms as needed.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🌐 API Endpoints
 
-## Code of Conduct
+The backend exposes the following API endpoints:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **GET** `/api/lists`: Fetch all saved forms
+- **POST** `/api/forms/save`: Save a new form
+- **GET** `/api/forms/{id}`: Retrieve a specific form
+- **PUT** `/api/forms/update/{id}`: Update an existing form
+- **DELETE** `/api/forms/{id}`: Delete a form
 
-## Security Vulnerabilities
+Make sure your backend is properly handling these requests and responds with appropriate status messages.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🖼️ Screenshots
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Here are some visuals of the application:
+
+- ![Screenshot 1](public/image/screenshots/1.png)
+- ![Screenshot 2](public/image/screenshots/2.png)
+- ![Screenshot 3](public/image/screenshots/3.png)
+- ![Screenshot 4](public/image/screenshots/4.png)
+- ![Screenshot 5](public/image/screenshots/5.png)
+- ![Screenshot 6](public/image/screenshots/6.png)
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! If you’d like to improve this project, please feel free to submit a Pull Request.
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
