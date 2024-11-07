@@ -31,5 +31,6 @@ Route::get('/test', function () {
     Route::get('/forms/{id}', [FormController::class, 'fetch']);
     Route::put('/forms/update/{id}', [FormController::class, 'update']);
     Route::get('/lists', [FormController::class, 'lists']);
+    Route::delete('/forms/delete/{id}', [FormController::class, 'delete']); 
 
 

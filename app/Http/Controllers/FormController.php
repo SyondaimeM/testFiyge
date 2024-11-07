@@ -74,5 +74,23 @@ class FormController extends Controller
         $forms = Form::all();
         return response()->json($forms);
     }
+
+    public function delete($id)
+    {
+        // Find the form by ID
+        $form = Form::find($id);
+
+        // If the form is not found, return a 404 response
+        if (!$form) {
+            return response()->json(['message' => 'Form not found'], 404);
+        }
+
+        // Delete the form
+        $form->delete();
+
+        // Return a success response
+        return response()->json(['message' => 'Form deleted successfully'], 200);
+    }
+
 }
 
