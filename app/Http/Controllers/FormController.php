@@ -9,11 +9,10 @@ use Validator;
 
 class FormController extends Controller
 {
-    //TODO: add jwt 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth:api'); // Apply JWT auth middleware
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth:api'); // Apply JWT auth middleware
+    }
 
     public function save(Request $request)
     {
