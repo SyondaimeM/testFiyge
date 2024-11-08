@@ -89,10 +89,15 @@ Make sure your backend is properly handling these requests and responds with app
 Here are some visuals of the application:
 
 - ![Screenshot 1](public/image/screenshots/1.png)
+---
 - ![Screenshot 2](public/image/screenshots/2.png)
+---
 - ![Screenshot 3](public/image/screenshots/3.png)
+---
 - ![Screenshot 4](public/image/screenshots/4.png)
+---
 - ![Screenshot 5](public/image/screenshots/5.png)
+---
 - ![Screenshot 6](public/image/screenshots/6.png)
 
 ---
